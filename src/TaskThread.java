@@ -1,9 +1,9 @@
 public class TaskThread extends Thread{
 	//Private Class Variables
-	private Matrix availableTransitions;
-	private Matrix matrix;
+	private Matrix availableTransitions, matrix;
 
 	//Public Methods
 	public void run() {
+		//TODO
 	}
 }

@@ -12,11 +12,17 @@ public class Log {
 	private Logger logger;
 
 	//Constructor
-	public Log(String fileName) throws SecurityException, IOException{
+	public Log(String fileName) throws SecurityException, IOException {
 		f = new File(fileName);
-		if(!f.exists()) { f.createNewFile(); }
+
+		if(!f.exists()) {
+			f.createNewFile();
+		}
+
 		FH = new FileHandler(fileName,true);
+		
 		SimpleFormatter formatter = new SimpleFormatter();
+		
 		FH.setFormatter(formatter);
 
 		//LLAMAR A WRITELOG()
@@ -37,5 +43,4 @@ public class Log {
 
 		System.out.println("");
 	}
-
 }

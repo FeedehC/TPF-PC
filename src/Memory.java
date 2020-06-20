@@ -4,8 +4,7 @@ public class Memory {
 	private int availableSlots;
 
 	//Constructor
-	public Memory(int slots)
-	{
+	public Memory(int slots) {
 		this.totalSlots = slots;
 		this.availableSlots = slots;
 	}
@@ -14,17 +13,17 @@ public class Memory {
 	public int getAvailableSlots() {
 		return availableSlots;
 	}
+	
 	public int getTotalSlots() {
 		return totalSlots;
 	}
-	public void writeInMemory(){
-		if(this.availableSlots > 0)
-		{
+
+	public void writeInMemory() {
+		if(this.availableSlots > 0) {
 			availableSlots--;
 		}
-		else{
+		else {
 			//THROW EXCEPTION CUSTOM
 		}
 	}
-
 }
