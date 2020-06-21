@@ -1,8 +1,8 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.logging.FileHandler;
 import java.util.logging.SimpleFormatter;
 
 public class Log {
@@ -14,15 +14,9 @@ public class Log {
 	//Constructor
 	public Log(String fileName) throws SecurityException, IOException {
 		f = new File(fileName);
-
-		if(!f.exists()) {
-			f.createNewFile();
-		}
-
+		if(!f.exists()) { f.createNewFile(); }
 		FH = new FileHandler(fileName,true);
-		
 		SimpleFormatter formatter = new SimpleFormatter();
-		
 		FH.setFormatter(formatter);
 
 		//LLAMAR A WRITELOG()
@@ -43,4 +37,5 @@ public class Log {
 
 		System.out.println("");
 	}
+
 }
