@@ -6,7 +6,10 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 public class Log {
-	//Private class fields
+
+	//Class constants
+
+	//Class variables
 	private File f;
 	private FileHandler FH;
 	private Logger logger;
@@ -20,6 +23,7 @@ public class Log {
 		FH.setFormatter(formatter);
 
 		//LLAMAR A WRITELOG()
+		//TODO: @Akamai98 ponete a codia
 	}
 
 	//Public Methods
@@ -37,5 +41,4 @@ public class Log {
 
 		System.out.println("");
 	}
-
 }

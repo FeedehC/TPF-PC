@@ -1,30 +1,33 @@
 public class Memory {
-	//Private Class Fields
+
+	//Class variables
 	private int totalSlots;
 	private int availableSlots;
 
 	//Constructor
-	public Memory(int slots)
-	{
+	/*
+	 *	@param	slots: Slots totales para la memoria.
+	 */
+	public Memory(int slots) {
 		this.totalSlots = slots;
 		this.availableSlots = slots;
 	}
 
-	//Public Methods
+	//Getters
 	public int getAvailableSlots() {
 		return availableSlots;
 	}
+
 	public int getTotalSlots() {
 		return totalSlots;
 	}
-	public void writeInMemory(){
-		if(this.availableSlots > 0)
-		{
+
+	//Public methods
+	public void writeInMemory() throws MemoryFullException {
+		if(this.availableSlots > 0) {
 			availableSlots--;
-		}
-		else{
-			//THROW EXCEPTION CUSTOM
+		} else {
+			throw new MemoryFullException("Error. Memoria llena.");
 		}
 	}
-
 }
