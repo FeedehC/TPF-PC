@@ -7,9 +7,11 @@ public class MemoryThread extends Thread {
     //Class variables
 
     //Constructor
-    public MemoryThread(Monitor monitor){ //}, Matrix firingVector ) {
-        //TODO
+    public MemoryThread(Monitor monitor) { //}, Matrix firingVector ) {
         this.monitor = monitor;
+        double[] fV = {0, 0, 0, 0, 0, 0, 0};
+        Matrix mfV = new Matrix(fV,7); //coloco 7 porque quiero 7 filas, es decir un vector parado
+        this.setFiringVector(mfV);
         //this.firingVector = firingVector;
     }
     //Setters

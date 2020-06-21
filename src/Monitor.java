@@ -3,6 +3,8 @@ import java.util.concurrent.Semaphore;
 import Jama.*;
 
 public class Monitor {
+	private final int N_PLACES = 9;
+	private final int N_TRANSITIONS = 7;
 	
 	//Private Class Fields
 	private boolean taskResource;
@@ -19,7 +21,6 @@ public class Monitor {
 	private double[] delaysAlpha;
 	private double[] timeoutsBetha;
 	private Politic politic;
-	private MyThreads myThreads;
 	private Memory memory;
 	private Log log;
 
@@ -43,7 +44,7 @@ public class Monitor {
 	}
 
 	//Public Methods
-	public void tryFiring(Matrix firingVector) {
-		//TODO
+	public synchronized void tryFiring(Matrix firingVector) {
+		Matrix change = incidence.times(firingVector); //Producto Matricial de I*S
+		
 	}
-}

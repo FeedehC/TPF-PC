@@ -1,7 +1,6 @@
 import Jama.Matrix;
 
 public class TaskThread extends Thread {
-
     //Class constants
    
     //Class variables
@@ -11,7 +10,9 @@ public class TaskThread extends Thread {
     //Constructor
     public TaskThread(Monitor monitor){//}, Matrix firingVector) {
         this.monitor = monitor;
-        //this.firingVector = firingVector;
+        double[] fV = {1, 1, 0, 0, 0, 0, 0};
+        Matrix mfV = new Matrix(fV,7); //coloco 7 porque quiero 7 filas, es decir un vector parado
+        this.setFiringVector(mfV);
     }
 
     //Public methods
