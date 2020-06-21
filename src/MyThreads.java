@@ -1,3 +1,5 @@
+import Jama.Matrix;
+
 public class MyThreads {
 	//Private Class Fields
 	private Matrix firingVector;
@@ -12,6 +14,7 @@ public class MyThreads {
 	//Public Methods
 	public Matrix getFiringVector() {
 		//Meant to be override
+		return firingVector;
 	}
 	public void setFiringVector() {
 		//Meant to be override
